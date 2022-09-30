@@ -27,7 +27,7 @@ the fraction of cells in that cluster that should express the gene.
 get_expressed_genes(ident, seurat_obj, pct = 0.10, assay_oi = NULL)
 }
 \examples{
-seurat_obj <- pbmc
+seuratObj <- readRDS(system.file("extdata","pbmc3k_final.rds", package = "iPhonedev2"))
 get_expressed_genes(ident = "CD8 T", seurat_obj = seuratObj, pct = 0.10)
 
 }

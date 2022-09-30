@@ -36,10 +36,11 @@ interaction_combination 配体受体marker基因的细胞互作
 sender_celltypes和receiver_celltypes的marker基因的细胞互作
 }
 \examples{
-sub_object = pbmc
-LR = read.delim("C:/Users/YWJ/Desktop/库/Ramilowski2015/Ramilowski_human.txt", header=TRUE)
+sub_object = readRDS(system.file("extdata","pbmc3k_final.rds", package = "iPhonedev2"))
+LR = Ramilowski_human
 sender_celltypes = c("CD8 T","NK")
 receiver_celltypes = c("DC","Platelet")
-interact_combination(sub_object,LR,marker_filter=FALSE,avg_log2FC=0.5,padj=0.05,sender_celltypes,receiver_celltypes)
+interact_combination(sub_object,LR,marker_filter=FALSE,
+avg_log2FC=0.5,padj=0.05,sender_celltypes,receiver_celltypes)
 
 }

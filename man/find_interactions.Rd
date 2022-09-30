@@ -48,17 +48,20 @@ ligand-receptor pairs from expression matrix
 Find ligand-receptor pairs from expression matrix
 }
 \examples{
-hnscc_primary <- readRDS("C:/Users/YWJ/Documents/hnscc_primary.rds")
+load(url("https://figshare.com/ndownloader/files/37663929"))
 lrDB <- CellChatDB.human
 receiver_celltypes=c("T cell","CAF","Endothelial","Macrophage","myofibroblast")
 sender_celltypes="primary"
-interaction1 <- find_interactions(object=hnscc_primary,DB=lrDB,celltype="celltype",method="expression_threshold",
+interaction1 <- find_interactions(object=hnscc_primary,DB=lrDB,celltype="celltype",
+                                  method="expression_threshold",
                                   receiver_celltypes=receiver_celltypes,
                                   sender_celltypes=sender_celltypes,threshold=3)
-interaction2 <- find_interactions(object=hnscc_primary,DB=lrDB,celltype="celltype",method="expression_product",
+interaction2 <- find_interactions(object=hnscc_primary,DB=lrDB,celltype="celltype",
+                                  method="expression_product",
                                   receiver_celltypes=receiver_celltypes,
                                   sender_celltypes=sender_celltypes,product_top=0.5)
-interaction3 <- find_interactions(object=hnscc_primary,DB=lrDB,celltype="celltype",method="differential_combinations",
+interaction3 <- find_interactions(object=hnscc_primary,DB=lrDB,celltype="celltype",
+                                  method="differential_combinations",
                                   receiver_celltypes=receiver_celltypes,
                                   sender_celltypes=sender_celltypes,
                                   marker_filter=TRUE,avg_log2FC=1,padj=0.05)

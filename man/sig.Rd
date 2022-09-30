@@ -25,7 +25,7 @@ ligand_logfc,ligand基因在特定细胞类型中的logfc值
 利用permutation计算配体受体对的pval,找出有显著意义的配体受体对
 }
 \examples{
-hnscc_primary <- readRDS("C:/Users/YWJ/Documents/hnscc_primary.rds")
+load(url("https://figshare.com/ndownloader/files/37663929"))
 interaction <- data.frame(ligand = c("MDK","LAMB3","ADM"),
                           receptor = c("NCL","CD44","CALCRL"),
                           from = "primary",to = "Macrophage")

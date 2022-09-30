@@ -38,7 +38,7 @@ vector,其中的每一个值都是permutation得到的两个mean值的乘积
 用于后面permutation单边检验
 }
 \examples{
-seurat <- readRDS("C:/Users/YWJ/Documents/hnscc_primary.rds")
+load(url("https://figshare.com/ndownloader/files/37663929"))
 l <- "TIGIT"
 r <- "PVR"
 n_sender <- 50

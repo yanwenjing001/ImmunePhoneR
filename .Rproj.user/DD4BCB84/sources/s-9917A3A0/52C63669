@@ -1,26 +1,26 @@
 {
-    "id": "8CBCE4F2",
-    "path": "~/iPhonedev2/NAMESPACE",
-    "project_path": "NAMESPACE",
-    "type": "r_namespace",
-    "hash": "0",
+    "id": "52C63669",
+    "path": "~/iPhonedev2/R/methods.R",
+    "project_path": "R/methods.R",
+    "type": "r_source",
+    "hash": "3021398352",
     "contents": "",
     "dirty": false,
-    "created": 1664513300854.0,
+    "created": 1664514640544.0,
     "source_on_save": false,
     "relative_order": 3,
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "6,0",
-        "scrollLine": "1"
+        "cursorPosition": "136,3",
+        "scrollLine": "123"
     },
     "folds": "",
-    "lastKnownWriteTime": 1664542282,
+    "lastKnownWriteTime": 1664542263,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1664542282,
+    "last_content_update": 1664542263565,
     "read_only": false,
     "read_only_alternatives": []
 }

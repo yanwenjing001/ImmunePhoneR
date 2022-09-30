@@ -19,7 +19,7 @@ ligand_logfc,ligand基因在特定细胞类型中的logfc值
 计算ligand和receptor在指定细胞类型中的logfc
 }
 \examples{
-seurat <- readRDS("C:/Users/YWJ/Documents/hnscc_primary.rds")
+load(url("https://figshare.com/ndownloader/files/37663929"))
 interaction <- data.frame(ligand = c("MDK","LAMB3"),
                           receptor = c("NCL","CD44"),
                           from = "primary",to = "Macrophage",
