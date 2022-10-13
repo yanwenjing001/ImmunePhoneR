@@ -14,6 +14,7 @@ library(reshape2)
 library(grid)
 library(gtable)
 library(Seurat) 
+library(iphonedev2) 
 
 ```
 ## 2.数据输入、选择先验的配体受体库
