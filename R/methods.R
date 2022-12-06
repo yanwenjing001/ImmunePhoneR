@@ -263,7 +263,7 @@ find_interactions <- function(object,DB,
   }
   cell.named.types=CT[CT %in% (c(receiver_celltypes,sender_celltypes))]
   # step2, 过滤配受体基因,要求至少在一个细胞类型的10%细胞中表达,得到profile
-  sub_object=object@assays$RNA@data[gene,]
+  sub_object=object[gene,]
   sub_object@meta.data=object@meta.data 
   Idents(sub_object)=Idents(object)
   all_expressed_genes = get_expressed_genes(sub_object, ident = c(receiver_celltypes,sender_celltypes),pct = 0.1)
