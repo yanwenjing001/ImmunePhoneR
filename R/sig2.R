@@ -4,7 +4,6 @@
 #' @param object2 Seurat object2
 #' @param interaction1 data.frame,必须包含ligand,receptor,from,to
 #' @param interaction2 data.frame,必须包含ligand,receptor,from,to
-#' @param method "product" or "sum"
 #' @param pval number,默认值为0.05
 #' @param sample1 name of sample1
 #' @param sample2 name of sample2
@@ -15,7 +14,7 @@
 #'
 #' @export
 #'
-sig2 <- function(object1,object2,interaction1,interaction2,pval=0.05,method="product",sample1="sample1",sample2="sample2"){
+sig2 <- function(object1,object2,interaction1,interaction2,pval=0.05,sample1="sample1",sample2="sample2"){
 
   ##ligand,receptor data.frame
   interaction=rbind(interaction1,interaction2)
