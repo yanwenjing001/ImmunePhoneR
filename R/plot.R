@@ -84,7 +84,7 @@ transformation=function(mat,range=c(-1,1)){
 #'
 #' @export
 #'
-map <- function(res,levels.mat=c("0","1"),transformation=F){
+map <- function(res,levels.mat=c("0","1"),transformation=T){
 
   significant_res <- res$significant
 
@@ -545,14 +545,14 @@ draw_legend = function(color, breaks, legend=NA, just="top",...){
 #'
 #' @export
 #'
-map2 <- function(res,levels.mat=c("0","1"),transformation=F){
-
+map2 <- function(res,levels.mat=c("0","1"),transformation=T){
+  
   if(ncol(res$ligand_logfc)==1){
     clust_l=clustering(res$ligand_logfc,row=T,col=F)
   } else{
     clust_l=clustering(res$ligand_logfc,row=T,col=T)
   }
-
+  
   if(ncol(res$receptor_logfc)==1){
     clust_r=clustering(res$receptor_logfc,row=T,col=F)
   } else{
@@ -560,32 +560,26 @@ map2 <- function(res,levels.mat=c("0","1"),transformation=F){
   }
   bottom.mat=t(clust_r)
   left.mat=clust_l
-
+  
   up.middle.mat=res$up.middle.mat[rownames(clust_l),rownames(clust_r)]
   down.middle.mat=res$down.middle.mat[rownames(clust_l),rownames(clust_r)]
   up.middle.mat[up.middle.mat< 1]=0
   up.middle.mat[up.middle.mat>=1]=1
   down.middle.mat[down.middle.mat< 1]=0
   down.middle.mat[down.middle.mat>=1]=1
-
-  transformation=function(mat,range=c(-1,1)){
-    mat=as.matrix(mat)
-    group=matrix(as.numeric(cut(mat,c(-Inf,range,Inf))),ncol=ncol(mat),nrow=nrow(mat))
-    mat[group==1]=range[1]
-    mat[group==3]=range[2]
-    return(mat)
-  }
+  if(transformation==T){
   if(min(left.mat) < 0){
     left.mat=transformation(left.mat,range=c(-1,1))
-  }
+  }}
   left.mat=as.matrix(left.mat)
   up.middle.mat=as.matrix(up.middle.mat)
   down.middle.mat=as.matrix(down.middle.mat)
   mode(up.middle.mat)="character"
   mode(down.middle.mat)="character"
+  if(transformation==T){
   if(min(bottom.mat) < 0){
     bottom.mat=transformation(bottom.mat,range=c(-1,1))
-  }
+  }}
   bottom.mat=as.matrix(bottom.mat)
   lr2map2(left.mat,up.middle.mat,down.middle.mat,bottom.mat,fontsize=7,levels.mat=c("0","1"))
 }
