@@ -77,7 +77,7 @@ sig <- function(object,interaction,pval=0.05,method="product"){
           prod.pvalue <- as.matrix(prod.pvalue)
       }
     }
-    pvalue <- melt(prod.pvalue)
+    pvalue <- reshape2::melt(prod.pvalue)
     colnames(pvalue) <- c("sender","receiver","pval")
     pvalue$ligand <- rownames(l)
     pvalue$receptor <- rownames(r)
@@ -178,7 +178,7 @@ logfc <- function(object,siglr){
   ligand_markers <- allmarkers[allmarkers$cluster %in% unique(lr_net$from),]
   ligand_markers2 = ligand_markers[ligand_markers$gene %in% lr_net$ligand,]
   ligand_markers2 = ligand_markers2[,c("gene","cluster","avg_log2FC")]
-  vis_l = dcast(ligand_markers2,gene~cluster)
+  vis_l = reshape2::dcast(ligand_markers2,gene~cluster)
   vis_l[is.na(vis_l)] <- 0
   rownames(vis_l) <- vis_l$gene
   vis_l_map <- vis_l[,-1,drop=FALSE]
