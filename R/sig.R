@@ -170,7 +170,7 @@ logfc <- function(object,siglr){
   receptor_markers <- allmarkers[allmarkers$cluster %in% unique(lr_net$to),]
   receptor_markers2 = receptor_markers[receptor_markers$gene %in% lr_net$receptor,]
   receptor_markers2 = receptor_markers2[,c("gene","cluster","avg_log2FC")]
-  vis_r = dcast(receptor_markers2,gene~cluster)
+  vis_r = reshape2::dcast(receptor_markers2,gene~cluster)
   vis_r[is.na(vis_r)] <- 0
   rownames(vis_r) <- vis_r$gene
   vis_r_map <- vis_r[,-1,drop=FALSE]
