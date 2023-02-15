@@ -1,4 +1,4 @@
-# iphonedev2
+ 
 # 通过配体受体推断细胞类型之间的相互作用
 
 在此说明文档中，您可以利用本工具进行推断、分析和可视化细胞-细胞之间的相互作用。本工具需要配体、受体相互作用的先验知识，对细胞与细胞之间的通信概率进行建模。在推断细胞间通信网络的基础上，为进一步的数据探索、分析和可视化提供了功能。 
@@ -117,6 +117,7 @@ siglr2 <- sig(object=hnscc_primary,DB=lrDB,lr=interaction3_2,pval=0.05)
 lrmap2 <- map(res=siglr2)  
 ```
 ![](https://github.com/yanwenjing001/Iphone/blob/main/vignettes/differential_combination.png)
+
 
          
          
