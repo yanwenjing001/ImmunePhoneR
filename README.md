@@ -50,7 +50,7 @@ lrDB <- read.delim("C:/Users/YWJ/Desktop/库/CellchatDB/cellchatDB_human.txt", h
 
 ```
 
-## 2.使用三种算法推断指定细胞类型间的互作
+## 3.使用三种算法推断指定细胞类型间的互作
 
 ### 方法1: 用表达阈值法推断肿瘤与TME细胞的相互作用
 ``` r
@@ -89,7 +89,7 @@ interaction3_2 <- find_interactions(object=hnscc,DB=lrDB,method="differential_co
                                   marker_filter=TRUE,avg_log2FC=1,padj=0.05)
 ```
 
-### 3.找出有意义的配体受体对及可视化
+## 4.找出有意义的配体受体对及可视化
 
 #### 表达阈值法
 ``` r
@@ -118,7 +118,10 @@ lrmap2 <- map(res=siglr2)
 ```
 ![](https://github.com/yanwenjing001/Iphone/blob/main/vignettes/differential_combination.png)
 
-
+## 5.作者
+闫文婧 9874703396@qq.com
+徐嘉潞 xujialu13009484417@163.com
+吕德康 dekanglv@126.com"
          
          
          
