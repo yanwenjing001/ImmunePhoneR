@@ -1,11 +1,15 @@
-Package: iPhonedev2
+Package:ImmunePhoneR
 Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Title:cell–cell interactions 
+Version: 1.0
+Authors@R: c(
+    person("Wenjing", "Yan", email = "9874703396@qq.com", role = c("aut")),
+    person("Jialu", "Xu", email = "xujialu13009484417@163.com", role = c("aut")),
+    person("Dekang", "Lv", email = "dekanglv@126.com", role = c("aut", "cre"))   
+)
+Maintainer: Dekang Lv <dekanglv@126.com>
+Description: Inferring cell-cell interactions based on single-cell data
+    To infer how Tumor cells affect Tumor microenvironment(TME) cells and how TME cells affect tumor cells.
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
