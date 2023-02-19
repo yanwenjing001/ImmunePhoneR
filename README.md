@@ -119,7 +119,7 @@ lrmap2 <- map(res=siglr2)
 ![](https://github.com/yanwenjing001/Iphone/blob/main/vignettes/differential_combination.png)
 
 ## 5.作者
-闫文婧 9874703396@qq.com
+闫文婧 984703396@qq.com
 徐嘉潞 xujialu13009484417@163.com
 吕德康 dekanglv@126.com
          
