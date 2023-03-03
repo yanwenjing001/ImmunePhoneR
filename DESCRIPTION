@@ -1,15 +1,10 @@
-Package:ImmunePhoneR
+Package: ImmunePhoneR
 Type: Package
-Title:cell–cell interactions 
+Title: cell–cell interactions 
 Version: 0.1.0
-Authors@R: c(
-    person("Wenjing", "Yan", email = "984703396@qq.com", role = c("aut")),
-    person("Jialu", "Xu", email = "xujialu13009484417@163.com", role = c("aut")),
-    person("Dekang", "Lv", email = "dekanglv@126.com", role = c("aut", "cre"))   
-)
+Authors@R: c(person("Wenjing", "Yan", email = "984703396@qq.com", role = c("aut")),person("Jialu", "Xu", email = "xujialu13009484417@163.com", role = c("aut")),person("Dekang", "Lv", email = "dekanglv@126.com", role = c("aut", "cre"))   )
 Maintainer: Dekang Lv <dekanglv@126.com>
 Description: Inferring cell-cell interactions based on single-cell data
-    To infer how Tumor cells affect Tumor microenvironment(TME) cells and how TME cells affect tumor cells.
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
