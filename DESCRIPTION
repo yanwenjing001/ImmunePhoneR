@@ -1,7 +1,7 @@
 Package:ImmunePhoneR
 Type: Package
 Title:cell–cell interactions 
-Version: 1.0
+Version: 0.1.0
 Authors@R: c(
     person("Wenjing", "Yan", email = "984703396@qq.com", role = c("aut")),
     person("Jialu", "Xu", email = "xujialu13009484417@163.com", role = c("aut")),
