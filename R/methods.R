@@ -267,7 +267,7 @@ find_interactions <- function(object,DB,
   sub_object=object[gene,]
   sub_object@meta.data=object@meta.data 
   Idents(sub_object)=Idents(object)
-  all_expressed_genes = get_expressed_genes(sub_object, ident = c(receiver_celltypes,sender_celltypes),pct = 0.1)
+  all_expressed_genes = get_expressed_genes(sub_object, ident = c(receiver_celltypes,sender_celltypes),pct = pct)
   expressed_genes = all_expressed_genes %>% unlist() %>% unique()
   mtx_lr <- mtx[rownames(mtx) %in% expressed_genes,]
   LRDB$ligand <- gsub("_","--",LRDB$ligand)
