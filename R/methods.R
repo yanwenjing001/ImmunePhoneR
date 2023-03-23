@@ -200,7 +200,8 @@ interact_combination <- function(sub_object,LR,marker_filter=FALSE,avg_log2FC=1,
 #' @param marker_filter logi,True or False
 #' @param avg_log2FC Limit testing to genes which show, on average, at least X-fold difference (log-scale) between the two groups of cells. Default is 0.25 Increasing logfc.threshold speeds up the function, but can miss weaker signals.
 #' @param padj Limit testing to genes which show,Default is 0.05
-#'
+#' @param padj Limit testing to genes which show,Default is 0.05
+#' @param pct 细胞数目percent
 #' @return ligand-receptor pairs from expression matrix
 #' @examples
 #' load(url("https://figshare.com/ndownloader/files/37663929"))
@@ -227,7 +228,7 @@ find_interactions <- function(object,DB,
                               celltype="celltype",
                               method=c("expression_threshold", "expression_product", "differential_combinations"),
                               threshold=0,product_top=0.5,receiver_celltypes="ALL",sender_celltypes="ALL",
-                              marker_filter=FALSE,avg_log2FC=1,padj=0.05){
+                              marker_filter=FALSE,avg_log2FC=1,padj=0.05,pct = 0.1){
 
   method <- match.arg(method)
   mtx <- as.matrix(object@assays$RNA@data) #object profile
